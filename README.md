@@ -17,7 +17,20 @@ Playwright + TypeScript test suite covering UI automation against [SauceDemo](ht
 npm install
 npx playwright install chromium
 ```
+## Environment Configuration
 
+The Reqres API now requires an API key for accessing its public endpoints.
+
+1. Create a free API key from:
+   https://app.reqres.in/api-keys
+
+2. Create a `.env` file in the project root.
+
+```env
+REQRES_API_KEY=your_api_key_here
+```
+
+3. The API tests will automatically use this key during execution.
 ---
 
 ## Running Tests
@@ -29,7 +42,13 @@ npx playwright install chromium
 | `npm run test:api` | API tests only |
 | `npm run test:headed` | UI tests in a visible browser |
 | `npm run report` | Open the last HTML report |
+### Run API Tests
 
+```bash
+npm run test:api
+```
+
+> **Note:** A valid Reqres API key is required for the API tests to execute successfully.
 ---
 
 ## Project Structure
@@ -100,3 +119,8 @@ npx playwright install chromium
 ## Submission Note
 
 Completed all five UI scenarios and all three API scenarios (including bonus). The test suite runs fully in parallel and passes cleanly. The main trade-off was keeping the POM methods focused — I chose not to build shared fixtures within the time-box, opting instead for readable `beforeEach` blocks which any engineer can follow immediately.
+
+
+## Notes
+
+While working on this assignment, I noticed that Reqres now requires an API key for its public endpoints. The project has been updated to support this change by loading the API key from environment variables, keeping sensitive information out of the source code and making the project easier to configure.
