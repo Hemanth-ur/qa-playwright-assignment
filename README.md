@@ -24,14 +24,13 @@ The Reqres API now requires an API key for accessing its public endpoints.
 1. Create a free API key from:
    https://app.reqres.in/api-keys
 
-2. Create a `.env` file in the project root.
+2. Copy `.env.example` and rename it to `.env`.
+
+3. Update the API key:
 
 ```env
 REQRES_API_KEY=your_api_key_here
 ```
-
-3. The API tests will automatically use this key during execution.
----
 
 ## Running Tests
 
