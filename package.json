@@ -1,0 +1,20 @@
+{
+  "name": "qa-assignment",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript test suite — SauceDemo UI & Reqres API",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui",
+    "test:api": "npx playwright test tests/api",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^26.1.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
