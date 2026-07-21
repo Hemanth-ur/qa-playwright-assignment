@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
-import 'dotenv/config';
 
 const BASE_URL = "https://reqres.in/api";
 
-const headers = {
+const headers = 
+{
   "x-api-key": process.env.REQRES_API_KEY!,
   "Content-Type": "application/json",
 };
