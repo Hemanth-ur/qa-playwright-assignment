@@ -1,4 +1,4 @@
-# QA Engineer Take-Home Assignment
+# QA Engineer
 
 Playwright + TypeScript test suite covering UI automation against [SauceDemo](https://www.saucedemo.com) and API testing against [Reqres](https://reqres.in).
 
